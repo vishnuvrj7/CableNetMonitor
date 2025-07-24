@@ -11,7 +11,7 @@
 
 *Monitor device uptime • Track network latency • Generate beautiful topology maps*
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) 
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
 </div>
 
@@ -26,6 +26,9 @@ CableNetMonitor is an intuitive network monitoring solution that provides compre
 - **Real-time Monitoring**: Track device availability and network performance
 - **Visual Network Maps**: Generate topology diagrams with hostname labels
 - **Comprehensive Logging**: Export data to CSV for analysis
+- **MAC & Vendor Discovery**: Identify device manufacturers and physical addresses
+- **QR Code Integration**: Generate shareable QR codes for network information
+- **Gateway Auto-Detection**: Automatically monitor your network gateway
 - **Flexible Scheduling**: One-time scans or continuous monitoring
 - **Cross-platform**: Works on Windows, Linux, and macOS
 
@@ -40,6 +43,10 @@ CableNetMonitor is an intuitive network monitoring solution that provides compre
 | 🕐 **Automated Scheduling** | Set up recurring scans every X minutes or run one-time scans |
 | 🗺️ **Network Visualization** | Generate beautiful topology graphs with device relationships |
 | 🏷️ **Hostname Labels** | Automatically resolve and display device hostnames |
+| 🔍 **MAC Address Discovery** | Retrieve and log physical addresses of network devices |
+| 🏢 **Vendor Identification** | Automatically identify device manufacturers from MAC addresses |
+| 📱 **QR Code Generation** | Generate QR codes for IP addresses and hostnames for easy sharing |
+| 🌐 **Gateway Auto-Detection** | Automatically includes and monitors your default gateway |
 | 🎨 **Colored Terminal** | Intuitive color-coded output (🟢 UP / 🔴 DOWN) |
 | 📱 **User-friendly CLI** | Emoji-based interface designed for beginners |
 
@@ -72,6 +79,9 @@ ping3>=4.0.0
 networkx>=2.8
 matplotlib>=3.5.0
 colorama>=0.4.4
+qrcode>=7.3.0
+pillow>=9.0.0
+requests>=2.28.0
 ```
 
 ---
@@ -116,8 +126,11 @@ CableNetMonitor/
 ├── 🔍 scanner.py           # IP range generation and scanning logic
 ├── 📝 logger.py            # CSV logging and data persistence
 ├── 🎨 visualizer.py        # Network topology visualization
+├── 📱 qr_generator.py      # QR code generation for devices
+├── 🏢 vendor_lookup.py     # MAC address vendor identification
 ├── 📊 ping_log.csv         # Generated log file
 ├── 🖼️ topology.png         # Generated network diagram
+├── 📱 qr_codes/            # Directory for generated QR codes
 ├── 📋 requirements.txt     # Python dependencies
 └── 📖 README.md           # Project documentation
 ```
@@ -138,6 +151,7 @@ The tool generates a comprehensive CSV log with the following columns:
 | `Latency` | Response time in ms | `1.28` |
 | `Hostname` | Resolved device name | `desktop-hp` |
 | `MAC Address` | Physical address | `d8:50:e6:12:3a:9c` |
+| `Vendor` | Device manufacturer | `Hewlett Packard Enterprise` |
 
 ### 🗺️ Network Topology: `topology.png`
 
@@ -145,6 +159,14 @@ The tool generates a comprehensive CSV log with the following columns:
 - Devices connected to gateway/router
 - Hostname labels for easy identification
 - Color-coded status indicators
+- Automatic gateway detection and inclusion
+
+### 📱 QR Codes: `qr_codes/`
+
+- Generated QR codes for each discovered device
+- Contains IP address and hostname information
+- Easy sharing and mobile device access
+- Organized in dedicated folder structure
 
 ---
 
@@ -159,26 +181,16 @@ The tool generates a comprehensive CSV log with the following columns:
 
 ### Terminal Output
 ```
-🟢 192.168.1.1    UP     2.1ms   router.local
-🟢 192.168.1.8    UP     1.3ms   desktop-hp
-🔴 192.168.1.15   DOWN   ---     unknown
-🟢 192.168.1.22   UP     0.8ms   laptop-work
+🌐 Gateway: 192.168.1.1 (router.local) - Vendor: Cisco Systems
+🟢 192.168.1.1    UP     2.1ms   router.local           00:14:22:01:23:45  Cisco Systems
+🟢 192.168.1.8    UP     1.3ms   desktop-hp             d8:50:e6:12:3a:9c  Hewlett Packard Enterprise  
+🔴 192.168.1.15   DOWN   ---     unknown                ---                Unknown
+🟢 192.168.1.22   UP     0.8ms   laptop-work            ac:de:48:00:11:22  Apple, Inc.
+📱 QR codes generated in ./qr_codes/ directory
+🗺️ Network topology saved as topology.png
 ```
 
 </div>
-
----
-
-## 🔮 Roadmap & Future Ideas
-
-- [ ] **📱 Web Dashboard**: Flask/Streamlit-based web interface
-- [ ] **🚨 Smart Alerts**: Notifications when devices go offline
-- [ ] **💾 Database Support**: SQLite and JSON export options
-- [ ] **🌐 Subnet Scanning**: Full subnet discovery (192.168.1.0/24)
-- [ ] **🔍 Device Intelligence**: Automatic device type/vendor detection from MAC
-- [ ] **📊 Historical Analytics**: Long-term network performance trends
-- [ ] **⚡ Performance Optimization**: Multi-threaded scanning
-- [ ] **🔒 Security Features**: Port scanning and vulnerability detection
 
 ---
 
@@ -187,9 +199,6 @@ The tool generates a comprehensive CSV log with the following columns:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-
-
 
 <div align="center">
 
