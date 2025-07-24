@@ -1,4 +1,7 @@
-ping3
+qrcode
+getmac
+mac-vendor-lookup
 networkx
 matplotlib
+plotly
 colorama
