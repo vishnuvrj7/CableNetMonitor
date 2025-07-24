@@ -1,6 +1,6 @@
 # 📡 CableNetMonitor
 
-<div align="center">
+
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
@@ -13,7 +13,6 @@
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
-</div>
 
 ---
 
@@ -150,7 +149,7 @@ The tool generates a comprehensive CSV log with the following columns:
 
 ## 📸 Screenshots
 
-<div align="center">
+
 
 ### Network Topology Visualization
 ![Network Topology](topology.png)
@@ -165,7 +164,7 @@ The tool generates a comprehensive CSV log with the following columns:
 🟢 192.168.1.22   UP     0.8ms   laptop-work
 ```
 
-</div>
+
 
 ---
 
@@ -217,9 +216,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Vishnu VR**
+**Vishnu VRJ**
 - GitHub: [@vishnuvrj7](https://github.com/vishnuvrj7)
-- Email: [your-email@example.com](mailto:your-email@example.com)
+- Email: [your-email@example.com](mailto:vishnuvrj16@gmail.com)
 
 ---
 
@@ -231,7 +230,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<div align="center">
+
 
 **If you find this project helpful, please consider giving it a ⭐!**
 
@@ -239,5 +238,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 [![GitHub forks](https://img.shields.io/github/forks/vishnuvrj7/CableNetMonitor?style=social)](https://github.com/vishnuvrj7/CableNetMonitor/network)
 
 *Made with ❤️ and Python*
-
-</div>
