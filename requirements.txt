@@ -1,3 +1,4 @@
 ping3
 networkx
 matplotlib
+colorama
