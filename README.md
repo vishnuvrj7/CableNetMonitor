@@ -11,7 +11,7 @@
 
 *Monitor device uptime • Track network latency • Generate beautiful topology maps*
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) 
 
 </div>
 
