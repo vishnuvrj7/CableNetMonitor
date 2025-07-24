@@ -1,6 +1,6 @@
 # 📡 CableNetMonitor
 
-
+<div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
@@ -13,6 +13,7 @@
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
+</div>
 
 ---
 
@@ -149,7 +150,7 @@ The tool generates a comprehensive CSV log with the following columns:
 
 ## 📸 Screenshots
 
-
+<div align="center">
 
 ### Network Topology Visualization
 ![Network Topology](topology.png)
@@ -164,7 +165,7 @@ The tool generates a comprehensive CSV log with the following columns:
 🟢 192.168.1.22   UP     0.8ms   laptop-work
 ```
 
-
+</div>
 
 ---
 
@@ -181,60 +182,21 @@ The tool generates a comprehensive CSV log with the following columns:
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. **🍴 Fork** the repository
-2. **🌿 Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **💾 Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **📤 Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **🔁 Open** a Pull Request
-
-### Development Setup
-
-```bash
-# Clone your fork
-git clone https://github.com/YOUR_USERNAME/CableNetMonitor.git
-cd CableNetMonitor
-
-# Install development dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt  # If you have dev requirements
-
-# Run tests
-python -m pytest
-```
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻 Author
-
-**Vishnu VRJ**
-- GitHub: [@vishnuvrj7](https://github.com/vishnuvrj7)
-- Email: [your-email@example.com](mailto:vishnuvrj16@gmail.com)
-
----
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who have helped improve this project
-- Inspired by the need for simple, effective network monitoring tools
-- Built with love for the open-source community
-
----
 
 
+
+<div align="center">
 
 **If you find this project helpful, please consider giving it a ⭐!**
 
 [![GitHub stars](https://img.shields.io/github/stars/vishnuvrj7/CableNetMonitor?style=social)](https://github.com/vishnuvrj7/CableNetMonitor/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/vishnuvrj7/CableNetMonitor?style=social)](https://github.com/vishnuvrj7/CableNetMonitor/network)
 
-*Made with ❤️ and Python*
+
+</div>
